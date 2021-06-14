@@ -1,0 +1,15 @@
+useradd user1
+passwd user1
+passwd
+yum install vim -y
+vidudoers
+vi /etc/ssh/sshd_config
+service sshd restart
+su user1
+ssh user1@<Private IP>
+
+
+ssh-keygen
+cp id_rsa.pub authorized_keys
+chmod 600 authorized_keys
+ssh-copy-id root@172.31.2.105
